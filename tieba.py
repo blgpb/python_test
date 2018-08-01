@@ -9,7 +9,7 @@ def loadPage(url, filename):
     print('Downloading...')
     headers = {'User-Agent':'Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11'}
     request = urllib.request.Request(url, headers = headers)
-    html = urllib.request.urlopen(request).read()
+    html = str(urllib.request.urlopen(request).read(), 'utf-8')
     writePage(html, filename)
 
 def writePage(html, filename):
