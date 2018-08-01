@@ -29,4 +29,4 @@ print(request.get_header('User-agent'))
 
 response = urllib.request.urlopen(request)
 
-print(response.read())
+print(str(response.read(), 'utf-8'))
